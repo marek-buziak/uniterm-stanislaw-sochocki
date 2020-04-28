@@ -1,0 +1,674 @@
+@import 'bootstrap';
+
+html {
+
+	@include media-breakpoint-up(xxl) {
+		font-size: 20px;
+	}
+
+	@include media-breakpoint-up(fhd) {
+		font-size: 22px;
+	}
+
+	body {
+
+
+		div.nav-placeholder {
+			#navbar-wrapper {
+				background-color: $white;
+				border-bottom: 1px solid $uniterm-1;
+				padding: 0 1rem;
+
+				@include media-breakpoint-up(lg) {
+					padding: 0 3rem;
+				}
+
+				a.navbar-brand {
+					display: block;
+					width: 4rem;
+					height: 5rem;
+					background-image: url('../img/main/uniterm-logo.png');
+					background-position: center center;
+					background-repeat: no-repeat;
+					background-size: contain;
+				}
+
+				#navbarNav {
+
+					ul.navbar-nav {
+						@include media-breakpoint-up(lg) {
+							height: 2.5rem;
+							justify-content: space-evenly;
+						}
+
+						li {
+							a {
+								font-family: MyFontLight, sans-serif;
+								@include media-breakpoint-up(lg) {
+									&:hover{
+										border-bottom: 1px solid $uniterm-1;
+									}
+								}
+								@include media-breakpoint-up(xl) {
+									font-size: 1.15rem;
+								}
+
+								@include media-breakpoint-up(xxl) {
+									font-size: 0.92rem;
+								}
+
+								@include media-breakpoint-up(fhd) {
+									font-size: 0.8363rem;
+								}
+							}
+						}
+					}
+
+					div.lang {
+
+						display: flex;
+						flex-direction: column;
+
+						@include media-breakpoint-up(lg) {
+							flex-direction: row;
+						}
+
+						div.pl,
+						div.en {
+
+							img {
+								display: block;
+								width: 2rem;
+								cursor: pointer;
+							}
+
+							padding: 0.5rem 0;
+
+							@include media-breakpoint-up(lg) {
+								padding: 0.5rem;
+							}
+						}
+
+						div.en {
+							margin-bottom: 1rem;
+
+							@include media-breakpoint-up(lg) {
+								margin-bottom: 0;
+							}
+						}
+					}
+				}
+
+				&.sticky {
+					position: fixed;
+					top: 0;
+					width: 100%;
+					z-index: 99;
+				}
+			}
+		}
+
+		div.gallery-content,
+		div.credentials-content {
+			text-align: center;
+			padding: 1rem 0;
+			@include media-breakpoint-up(md) {
+				padding: 2rem 0;
+			}
+			@include media-breakpoint-up(lg) {
+				padding: 3rem 0;
+			}
+			a {
+				display: inline-block;
+				margin: 1rem;
+				img {
+					max-width: 200px;
+					max-height: auto;
+					border-radius: 0.3125rem;
+					border: 1px solid $white;
+				}
+			}
+
+			div.camera-image,
+			div.thumbup-image {
+				max-width: 100px;
+				margin: 0 auto 2rem;
+				border-bottom: 1px solid $white;
+
+				@include media-breakpoint-up(lg) {
+					max-width: 150px;
+					margin-bottom: 3.5rem;
+				}
+
+				img {
+					max-width: 100%;
+					max-height: 100%;
+				}
+			}
+
+			div.thumbup-image {
+				padding-bottom: 0.5rem;
+			}
+
+
+		}
+
+		div.lp-content-outer {
+
+			display: flex;
+			justify-content: center;
+			min-height: 65vh;
+			background: $white;
+			-webkit-box-shadow: inset 0px 0px 32px 4px rgba(33,32,33,0.6);
+			-moz-box-shadow: inset 0px 0px 32px 4px rgba(33,32,33,0.6);
+			box-shadow: inset 0px 0px 32px 4px rgba(33,32,33,0.4);
+
+			div.lp-content-inner {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				width: 75%;
+
+				@media (orientation: landscape) {
+					padding: 2rem 0;
+				}
+
+				img {
+					width: 100%;
+					max-width: 300px;
+
+					@include media-breakpoint-up(xxl) {
+						max-width: 350px;
+					}
+
+					@include media-breakpoint-up(xxl) {
+						max-width: 350px;
+					}
+				}
+
+
+				p {
+					margin-bottom: 0;
+					text-align: center;
+
+					&.company-name {
+						font-family: MyFontSemiBold;
+						font-size: 3rem;
+						text-transform: uppercase;
+						margin-bottom: 1rem;
+						display: flex;
+						width: 100%;
+						justify-content: space-between;
+						max-width: 500px;
+
+						@include media-breakpoint-up(md) {
+							font-size: 4rem;
+						}
+
+						@include media-breakpoint-up(xxl) {
+							max-width: 600px;
+						}
+
+						span.delay {
+							display: inline-block;
+						}
+
+						span.delay-1 {
+							animation-name: showUp1;
+							animation-duration: 3s;
+							animation-timing-function: linear;
+							animation-delay: 0;
+							animation-iteration-count: 1;
+							animation-direction: normal;
+						}
+
+						span.delay-2 {
+							animation-name: showUp1;
+							animation-duration: 2s;
+							animation-timing-function: ease-out;
+							animation-delay: 0;
+							animation-iteration-count: 1;
+							animation-direction: normal;
+						}
+
+						span.delay-3 {
+							animation-name: showUp2;
+							animation-duration: 1.5s;
+							animation-timing-function: ease-in-out;
+							animation-delay: 0;
+							animation-iteration-count: 2;
+							animation-direction: normal;
+						}
+
+						span.delay-4 {
+							animation-name: showUp2;
+							animation-duration: 2.5s;
+							animation-timing-function: ease-in-out;
+							animation-delay: 0;
+							animation-iteration-count: 1;
+							animation-direction: revert;
+						}
+						span.delay-6 {
+							animation-name: showUp1;
+							animation-duration: 4.5s;
+							animation-timing-function: ease-out;
+							animation-delay: 0;
+							animation-iteration-count: 1;
+							animation-direction: revert;
+						}
+					}
+
+					&.owner {
+
+						font-family: MyFontRegular;
+						font-size: 1.5rem;
+						margin-top: 1rem;
+						animation-name: showUp3;
+						animation-duration: 4s;
+						animation-timing-function: cubic-bezier(0, 0, 1.0, 1.0);
+						animation-delay: 0;
+						animation-iteration-count: 1;
+						animation-direction: normal;
+
+						@include media-breakpoint-up(md) {
+							font-size: 2rem;
+						}
+					}
+				}
+			}
+		}
+
+		div.about-us-content,
+		div.benefits-content {
+
+			margin: 1rem;
+			border: 1px solid $uniterm-2;
+			padding: 1rem;
+
+			@include media-breakpoint-up(md) {
+				padding: 2.5rem 2rem;
+			}
+		}
+
+		div.about-us-content {
+
+			p.info-brief {
+				margin-bottom: 2rem;
+				color: $white;
+				text-align: center;
+				border-bottom: 1px solid white;
+				padding-bottom: 1rem;
+
+				@include media-breakpoint-up(md) {
+					text-align: left;
+					margin-bottom: 2.5rem;
+					font-size: 1.125rem;
+				}
+
+				@include media-breakpoint-up(lg) {
+					font-size: 1.25rem;
+				}
+			}
+
+
+
+			div.specialities,
+			div.specialities-ext {
+
+				color: $white;
+				margin-bottom: 1rem;
+
+				p.title-header {
+					font-size: 0.875rem;
+					@include media-breakpoint-up(md) {
+						font-size: 1rem;
+					}
+				}
+				div.content {
+					ul {
+						list-style-type: none;
+						margin-bottom: 0;
+						margin-left: 1rem;
+
+						li {
+							font-family: MyFontLight;
+							font-size: 0.75rem;
+							position: relative;
+
+							@include media-breakpoint-up(md) {
+								font-size: 0.875rem;
+							}
+
+							&:not(:last-child) {
+								margin-bottom: 0.3125rem;
+							}
+
+							&:before {
+								content: "\f00c";
+								font-family: "Font Awesome 5 Free";
+								font-weight: 900;
+								position: absolute;
+								display: inline-block;
+								font-style: normal;
+								font-variant: normal;
+								text-rendering: auto;
+								-webkit-font-smoothing: antialiased;
+								top: 0;
+								left: -2rem;
+							}
+						}
+					}
+				}
+			}
+
+			div.pipes-img {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				figure {
+					img {
+						width: 100%;
+						max-width: 400px;
+						border: 0.0625rem solid $white;
+						border-radius: 0.625rem;
+					}
+					figcaption {
+						text-align: center;
+						a {
+							font-size: 0.5rem;
+
+						}
+					}
+				}
+
+			}
+		}
+
+		div.benefits-content {
+
+			div.benefits-brief {
+
+				border-bottom: 1px solid white;
+				padding-bottom: 1rem;
+				margin-bottom: 2rem;
+
+				@include media-breakpoint-up(md) {
+					margin-bottom: 4rem;
+				}
+
+				@include media-breakpoint-up(lg) {
+					margin-bottom: 6rem;
+				}
+
+				p {
+					color: $white;
+					text-align: center;
+					margin-bottom: 0;
+
+
+					@include media-breakpoint-up(md) {
+						font-size: 1.125rem;
+					}
+
+					@include media-breakpoint-up(lg) {
+						font-size: 1.25rem;
+					}
+				}
+			}
+
+			div.icon-wrapper {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				max-width: 150px;
+
+				@include media-breakpoint-up(lg) {
+					max-width: 200px;
+				}
+
+				div.icon-img,
+				div.icon-text {
+					transition: 0.6s;
+				}
+
+				div.icon-img {
+					background-color: $white;
+					padding: 1rem;
+					border-radius: 0.625rem;
+					border: 0.125rem solid $black;
+
+					img {
+						width: 100%;
+					}
+
+					@include media-breakpoint-up(lg) {
+						position: relative;
+						z-index: 1;
+						cursor: pointer;
+
+						&:hover {
+							filter: drop-shadow(0rem 0rem 2rem lighten($blue, 20%));
+
+							+ div {
+								opacity: 1;
+							}
+						}
+					}
+				}
+
+				div.icon-text {
+
+					font-family: 'MyFontLight';
+					font-size: 0.875rem;
+					line-height: 1.3;
+					margin-top: 0.25rem;
+					padding: 0 0.3125rem;
+					text-align: center;
+					color: white;
+
+					@include media-breakpoint-up(lg) {
+						opacity: 0;
+						position: relative;
+						z-index: 2;
+					}
+				}
+			}
+		}
+
+		footer {
+
+			background-color: lighten($black, 5%);
+			border-top: 0.0625rem‬ solid $uniterm-5;
+			border-bottom: 0.0625‬rem solid $uniterm-5;
+
+			div.firm-info-wrapper {
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				box-sizing: border-box;
+				padding: 1rem;
+
+				@include media-breakpoint-up(md) {
+					padding: 3rem;
+				}
+
+				div.frame {
+
+					display: flex;
+
+					@include media-breakpoint-up(md) {
+						width: 75%;
+						/*max-width: 1800px;*/
+						padding: 1rem;
+						border-top: 1px solid $white;
+						border-bottom: 4px solid $white;
+					}
+
+					div.labourer {
+
+						width: 40%;
+						display: none;
+						flex-direction: column;
+						justify-content: center;
+						max-width: 250px;
+
+						@include media-breakpoint-up(md) {
+							display: flex;
+						}
+
+						@include media-breakpoint-up(lg) {
+							max-width: 300px;
+						}
+
+						img {
+							width: 100%;
+						}
+					}
+
+					div.firm-info {
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+						box-sizing: border-box;
+
+						@include media-breakpoint-up(md) {
+							padding: 1rem;
+							width: 60%;
+						}
+
+						p {
+							color: $uniterm-5;
+							font-size: 0.75rem;
+							margin-bottom: 0;
+							font-family: MyFontLight;
+							line-height: 1.3;
+							text-align: center;
+							@include media-breakpoint-up(lg) {
+								font-size: 1.15rem;
+							}
+
+							@include media-breakpoint-up(xxl) {
+								font-size: 0.85rem;
+							}
+						}
+
+						p.firm-name {
+							font-size: 1.15rem;
+							text-align: center;
+							font-family: MyFontSemiBold;
+							margin-bottom: 1rem;
+
+							@include media-breakpoint-up(lg) {
+								font-size: 1.5rem;
+							}
+
+							@include media-breakpoint-up(xxl) {
+								font-size: 1.15rem;
+							}
+
+							span {
+								font-size: 1rem;
+								display: block;
+								line-height: 1;
+
+								@include media-breakpoint-up(lg) {
+									font-size: 1.25rem;
+								}
+
+								@include media-breakpoint-up(xxl) {
+									font-size: 1rem;
+								}
+							}
+						}
+						p.country {
+							display: none;
+							text-transform: uppercase;
+						}
+					}
+				}
+			}
+		}
+
+		p.copy,
+		p.attribution {
+			display: flex;
+			padding: 1rem 1rem 0;
+			color: $uniterm-5;
+			margin-bottom: 0;
+			justify-content: center;
+		}
+
+		p.attribution {
+			margin-top: 0.5rem;
+			padding: 0 1rem 0.5rem 1rem;
+			font-size: 0.5rem;
+			text-align: center;
+		}
+
+		#glightbox-body {
+			img {
+				padding: 1rem;
+			}
+
+			button.gclose.gbtn {
+				display: flex;
+				border: 1px solid $white;
+			}
+		}
+
+		div.lp-content-outer,
+		div.about-us-content,
+		div.benefits-content,
+		div.gallery-content,
+		div.credentials-content,
+		footer,
+		p.copy,
+		p.attribution{
+			transition: 0.4s;
+			&.blur-overlay {
+				filter: blur(5px);
+			}
+		}
+
+		&.scroll-disabled {
+			overflow-y: hidden;
+		}
+	}
+}
+
+@keyframes mymove {
+	from {top: 0px;}
+	to {top: 200px;}
+}
+
+@keyframes showUp1 {
+
+	0% {opacity: 0}
+	25% {opacity: 0.3}
+	50% {opacity: 0.6}
+	75% {opacity: 0.2}
+	100%{opacity: 1}
+
+}
+
+@keyframes showUp2 {
+
+	0% {opacity: 0.6}
+	25% {opacity: 0.3}
+	50% {opacity: 0.8}
+	75% {opacity: 0.4}
+	100%{opacity: 1}
+
+}
+
+@keyframes showUp3 {
+
+	0% {opacity: 0}
+	50% {opacity: 0.5}
+	100%{opacity: 1}
+
+}

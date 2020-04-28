@@ -1,0 +1,17 @@
+### PROTECT FILES ###
+<FilesMatch "\.(htaccess|htpasswd|ini|fla|psd|log|sh)$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+
+RewriteEngine on
+RewriteRule strona-glowna index.html
+RewriteRule kilka-slow-o-nas about.html
+RewriteRule korzysci-wspolpracy benefits.html
+RewriteRule referencje-kontrahentow credentials.html
+RewriteRule galeria-zrealizowanych-prac gallery.html
+RewriteRule home index.html
+RewriteRule a-few-words-about-us about.html
+RewriteRule benefits-of-cooperation benefits.html
+RewriteRule contractors-credentials credentials.html
+RewriteRule gallery-of-completed-works gallery.html
